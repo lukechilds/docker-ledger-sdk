@@ -1,7 +1,7 @@
 sudo: required
 services:
   - docker
-script: docker build -t ledger-sdk .
+script: docker build -t ledger-sdk . && ./test
 notifications:
   email:
     on_success: never
