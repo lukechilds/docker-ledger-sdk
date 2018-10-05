@@ -9,7 +9,7 @@ ENV BOLOS_SDK /opt/bolos-sdk
 
 RUN apt-get update
 
-RUN apt-get install -y --no-install-recommends libc6-dev-i386 curl ca-certificates bzip2 xz-utils git make
+RUN apt-get install -y --no-install-recommends libc6-dev-i386 python python-pil curl ca-certificates bzip2 xz-utils git make
 
 RUN echo "Create install directories" && \
   mkdir ${BOLOS_ENV} ${BOLOS_SDK}
