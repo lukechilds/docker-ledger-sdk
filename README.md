@@ -15,6 +15,10 @@ A fully pre-configured Ledger SDK build environment.
 docker run -v ~/code/my-ledger-app:/code lukechilds/ledger-sdk
 ```
 
+<p align="center">
+	<img src="demo.svg" width="720">
+</p>
+
 ## License
 
 MIT © Luke Childs
