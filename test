@@ -22,4 +22,4 @@ docker run -v ${PWD}:/code ledger-sdk
 
 echo
 echo "Checking bin/app.hex checksum..."
-echo "ee5dd7653d67036aa98ecb940b411193c3c5cc58f862c8a325a12dd537350458  bin/app.hex" | shasum --algorithm 256 --check
+echo "bf881e2e2473268fa44fe1c419ae005caf4f16c958f4cb3ea723be563d03b5fa  bin/app.hex" | shasum --algorithm 256 --check
