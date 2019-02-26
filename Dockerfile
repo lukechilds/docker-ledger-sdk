@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
 VOLUME ["/code"]
@@ -6,7 +6,7 @@ WORKDIR /code
 
 ENV BOLOS_ENV /opt/bolos-env
 ENV BOLOS_SDK /opt/bolos-sdk
-ENV BOLOS_VERSION nanos-1421
+ENV BOLOS_VERSION nanos-1552
 
 RUN apt-get update
 
@@ -22,10 +22,10 @@ RUN echo "Install custom gcc" && \
   rm /tmp/gcc.tar.bz2
 
 RUN echo "Install custom clang" && \
-  curl -L https://releases.llvm.org/4.0.0/clang+llvm-4.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz --output /tmp/clang.tar.xz && \
-  echo "8e920c166b00e7869cea443e305933cc410bd1b982c7c5dc56995b6cffb0586f  /tmp/clang.tar.xz" | sha256sum -c && \
+  curl -L https://releases.llvm.org/7.0.1/clang+llvm-7.0.1-x86_64-linux-gnu-ubuntu-18.04.tar.xz --output /tmp/clang.tar.xz && \
+  echo "e74ce06d99ed9ce42898e22d2a966f71ae785bdf4edbded93e628d696858921a  /tmp/clang.tar.xz" | sha256sum -c && \
   tar -xvf /tmp/clang.tar.xz -C ${BOLOS_ENV} && \
-  mv ${BOLOS_ENV}/clang+llvm-4.0.0-x86_64-linux-gnu-ubuntu-16.04 ${BOLOS_ENV}/clang-arm-fropi && \
+  mv ${BOLOS_ENV}/clang+llvm-7.0.1-x86_64-linux-gnu-ubuntu-18.04 ${BOLOS_ENV}/clang-arm-fropi && \
   rm /tmp/clang.tar.xz
 
 RUN echo "Install Ledger Nano S SDK" && \
