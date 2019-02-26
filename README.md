@@ -32,6 +32,17 @@ To run an arbitrary command in your project dir:
 docker run -v ${PWD}:/code lukechilds/ledger-sdk 'make clean'
 ```
 
+The following environment variables can be set to customise the build (here
+shown with defaults):
+
+```sh
+docker run \
+	-e "BOLOS_ENV=/opt/bolos-env" \ # Where to store custom compiler tooling
+	-e "BOLOS_SDK=/opt/bolos-sdk" \ # Where to store the BOLOS SDK itself
+	-e "BOLOS_VERSION=nanos-1552" \ # Git tag for BOLOS version
+	-v ${PWD}:/code lukechilds/ledger-sdk
+```
+
 ## License
 
 MIT © Luke Childs
