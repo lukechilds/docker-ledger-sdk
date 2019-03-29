@@ -37,7 +37,7 @@ shown with defaults):
 
 ```sh
 docker run \
-	-e "BOLOS_VERSION=tags/nanos-1552" \ # Git commit for BOLOS version
+	-e "BOLOS_VERSION=tags/nanos-1552" \ # BOLOS SDK git commit/tag/branch to checkout
 	-v ${PWD}:/code lukechilds/ledger-sdk
 ```
 
