@@ -37,9 +37,7 @@ shown with defaults):
 
 ```sh
 docker run \
-	-e "BOLOS_ENV=/opt/bolos-env" \ # Where to store custom compiler tooling
-	-e "BOLOS_SDK=/opt/bolos-sdk" \ # Where to store the BOLOS SDK itself
-	-e "BOLOS_VERSION=nanos-1552" \ # Git tag for BOLOS version
+	-e "BOLOS_VERSION=tags/nanos-1552" \ # Git commit for BOLOS version
 	-v ${PWD}:/code lukechilds/ledger-sdk
 ```
 
